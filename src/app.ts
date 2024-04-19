@@ -35,7 +35,7 @@ app.use('/new', (req, res) => {
   }
 
   if (req.method === 'GET') {
-    res.sendFile('views/form.html', { root: '.' });
+    res.sendFile('src/views/form.html', { root: '.' });
   }
 });
 
