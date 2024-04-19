@@ -1,0 +1,39 @@
+doctype
+html 
+  head
+    style(type="text/css").
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body,
+      main {
+        width: 100%;
+        height: 100dvh;
+      }
+      .title {
+        text-align: center;
+        color: red;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%
+      }
+      ul {
+        list-style: none;
+        padding: 2rem;
+        border: 1px solid black;
+        line-height: 2;
+      }
+  body
+    main
+      div.title
+        h1 Message Board
+      div.container
+        ul 
+          each msg in messages 
+            li= msg.user + ", " + msg.text + ", " + msg.added
+        a(href="/new") new
